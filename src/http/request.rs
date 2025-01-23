@@ -42,10 +42,10 @@ impl<'buf> TryFrom<&'buf [u8]> for Request<'buf> {
         }
 
         let method = method.parse()?;
-        let mut path = "";
+        let mut path = path_and_query;
         let mut query_string = None;
 
-        if let Some(i) =  path_and_query.find('?') {
+        if let Some(i) = path_and_query.find('?') {
             query_string = Some(QueryString::from(&path_and_query[i+1..]));
             path = &path_and_query[..i];
         } 
