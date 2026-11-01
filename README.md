@@ -1,4 +1,4 @@
-# 🚀 simple_HTTP_server
+# simple_HTTP_server
 A basic HTTP server implemented in Rust 🦀.
 
 ## ✨ Features
